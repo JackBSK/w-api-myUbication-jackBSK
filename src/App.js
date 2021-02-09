@@ -49,7 +49,7 @@ function App() {
                             </div>
                             <div className="weather-box">
                                 <div className="temp">
-                                    {changeunits ? Math.round(weather.main.temp) * 9/5 +32 + '°F' : Math.round(weather.main.temp) + '°C' }
+                                    {changeunits ? Math.round(weather.main.temp) + '°C' : Math.round(weather.main.temp)* 9/5 +32 + '°F' }
                                 </div>
                                 <div className="btn-degree">
                                 <button onClick={handleChangeUnits}>Celsius / Fahrenheit</button>
@@ -68,7 +68,7 @@ function App() {
                     : (
                         <div>
                             <div className="location-box">
-                                <div className="location">City not found</div>
+                                <div className="location">Location disabled</div>
                                 <div className="date">{dateBuilder(new Date())}</div>
                             </div>
                             <div className="weather-box">
@@ -76,7 +76,7 @@ function App() {
                                     ??°
                                 </div>
                                 <div className="weather">
-                                    Try another city please
+                                    Allow ubication please
                                 </div>
                             </div>
                         </div>
